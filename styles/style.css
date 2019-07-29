@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+html {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+  display: grid;
+  min-height: 100vh;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1200px 1fr;
+  grid-template-rows: 80px 1fr minmax(100px, auto);
+  grid-template-areas: ". pageHeader  ." ". pageContent ." ". pageFooter  .";
+}
+body > div[class^="margin-"] {
+  background: #000;
+}
+.pageHeader {
+  display: grid;
+  grid-template-columns: 245px 1fr;
+  align-items: end;
+  grid-template-areas: "logo navigation";
+  grid-area: pageHeader;
+  padding: 0 120px;
+  z-index: 1;
+  color: #fff;
+  background-color: #290000;
+}
+.pageHeader a {
+  color: #fff;
+}
+.pageHeader > .logo {
+  grid-area: logo;
+  font-size: 28px;
+  line-height: 28px;
+}
+.pageHeader > .logo > .small {
+  display: block;
+  color: #979797;
+  font-size: 11px;
+  line-height: 11px;
+}
+.pageHeader > .mainMenu {
+  grid-area: navigation;
+  margin-right: -20px;
+}
+.pageHeader > .mainMenu > ul {
+  display: grid;
+  list-style-type: none;
+  margin: 0;
+  grid-auto-flow: column;
+  justify-self: end;
+  justify-items: end;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.pageHeader > .mainMenu > ul > li {
+  padding: 12px 20px;
+}
+.pageHeader > .mainMenu > ul > li:hover {
+  background-color: #76c38f;
+  border-radius: 5px;
+}
+.pageContent {
+  grid-area: pageContent;
+  background-color: #660000;
+}
+.pageContent > section {
+  padding: 0 120px;
+}
+.pageContent > .mainBanerSection {
+  display: grid;
+  grid-template-columns: 15px 1fr 430px 15px;
+  grid-template-rows: 220px auto 1fr;
+  column-gap: 45px;
+  height: 520px;
+  background-color: #290000;
+  align-items: center;
+  grid-template-areas: "arrowLeft headline mainImage arrowRight" "arrowLeft content  mainImage arrowRight" "arrowLeft button   mainImage arrowRight";
+}
+.pageContent > .mainBanerSection > a[class^="arrow"] {
+  justify-self: center;
+  width: 15px;
+  height: 28px;
+}
+.pageContent > .mainBanerSection > .arrowLeft {
+  grid-area: arrowLeft;
+  background-image: url(../images/Left_arrow.png);
+}
+.pageContent > .mainBanerSection > .arrowRight {
+  grid-area: arrowRight;
+  background-image: url(../images/Right_arrow.png);
+}
+.pageContent > .mainBanerSection > h1 {
+  grid-area: headline;
+  align-self: end;
+  width: 320px;
+  color: #ffffff;
+  font-size: 46px;
+  line-height: 46px;
+  font-weight: normal;
+  margin-bottom: 18px;
+}
+.pageContent > .mainBanerSection > p {
+  grid-area: content;
+  align-self: start;
+  width: 320px;
+  color: #979797;
+  font-size: 12px;
+  line-height: 19.2px;
+  margin-bottom: 17px;
+  letter-spacing: 0.8px;
+}
+.pageContent > .mainBanerSection > .button {
+  grid-area: button;
+  justify-self: start;
+  align-self: start;
+  display: inline-block;
+  color: #fff;
+  padding: 11px 16px;
+  background-color: #76c38f;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 13px;
+}
+.pageContent > .mainBanerSection > img {
+  grid-area: mainImage;
+  align-self: center;
+  object-fit: cover;
+  width: 380px;
+  height: 380px;
+  border: 25px solid #6b6b6b;
+  left: 25px;
+  top: 25px;
+  border-radius: 50%;
+}
+.pageContent .servicesSection {
+  display: grid;
+  grid-template-columns: repeat(4, 225px);
+  gap: 20px;
+  grid-auto-rows: 305px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+.pageContent .servicesSection > h2 {
+  display: none;
+}
+.pageContent .servicesSection > article {
+  overflow: hidden;
+  padding: 21px 33px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "image" "headline" "content";
+  background: #fff;
+}
+.pageContent .servicesSection > article > h3 {
+  grid-area: headline;
+  color: #333333;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 12px 0;
+}
+.pageContent .servicesSection > article > img {
+  grid-area: image;
+  width: 120px;
+  height: 120px;
+  justify-self: center;
+  object-fit: cover;
+}
+.pageContent .servicesSection > article > p {
+  color: #979797;
+  font-size: 12px;
+  line-height: 16.8px;
+  text-align: justify;
+  letter-spacing: 0.8px;
+}
+.pageContent .servicesSection > article:hover {
+  background-color: #76c38f;
+}
+.pageContent .servicesSection > article:hover > h3 {
+  color: #fff;
+}
+.pageContent .servicesSection > article:hover > p {
+  color: #fff;
+}
+.pageFooter {
+  grid-area: pageFooter;
+}
