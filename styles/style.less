@@ -28,30 +28,24 @@ body > div[class^="margin-"] {
     background: #000;
 }
 
-
 // Page Header
 .pageHeader {
     display: grid;
     grid-template-columns: 245px 1fr;
     align-items: end;
     grid-template-areas: "logo navigation";
-
     grid-area: pageHeader;
     padding: 0 120px;
     z-index: 1;
     color: #fff;
     background-color: #290000;
-
-
     & a {
         color: #fff;
     }
-
     &>.logo {
         grid-area: logo;
         font-size: 28px;
         line-height: 28px;
-
         &>.small {
             display: block;
             color: #979797;
@@ -59,11 +53,9 @@ body > div[class^="margin-"] {
             line-height: 11px;
         }
     }
-
     &>.mainMenu {
         grid-area: navigation;
         margin-right: -20px;
-
         &>ul {
             display: grid;
             list-style-type: none;
@@ -73,17 +65,14 @@ body > div[class^="margin-"] {
             justify-items: end;
             text-transform: uppercase;
             font-size: 13px;
-
             &>li {
                 padding: 12px 20px;
-                
                 &:hover {
                     background-color: #76c38f;
                     border-radius: 5px;
                 }
             }
         }
-        
     }
 }
 
@@ -91,41 +80,35 @@ body > div[class^="margin-"] {
 .pageContent {
     grid-area: pageContent;
     background-color: #660000;
-
     &>section {
         padding: 0 120px;
     }
-    
     &>.mainBanerSection {
         display: grid;
         grid-template-columns: 15px 1fr 430px 15px;
-        grid-template-rows: 220px auto 1fr; 
+        grid-template-rows: 220px auto 1fr;
         column-gap: 45px;
         height: 520px;
         background-color: #290000;
         align-items: center;
         grid-template-areas: 
-            "arrowLeft headline mainImage arrowRight"
-            "arrowLeft content  mainImage arrowRight"
+            "arrowLeft headline mainImage arrowRight" 
+            "arrowLeft content  mainImage arrowRight" 
             "arrowLeft button   mainImage arrowRight";
-
-        &>a[class^="arrow"]{
+        &>a[class^="arrow"] {
             justify-self: center;
             width: 15px;
             height: 28px;
         }
-
-        &>.arrowLeft{
+        &>.arrowLeft {
             grid-area: arrowLeft;
             background-image: url(../images/Left_arrow.png);
         }
-
-        &>.arrowRight{
+        &>.arrowRight {
             grid-area: arrowRight;
             background-image: url(../images/Right_arrow.png);
         }
-
-        &>h1{
+        &>h1 {
             grid-area: headline;
             align-self: end;
             width: 320px;
@@ -135,7 +118,6 @@ body > div[class^="margin-"] {
             font-weight: normal;
             margin-bottom: 18px;
         }
-
         &>p {
             grid-area: content;
             align-self: start;
@@ -146,7 +128,6 @@ body > div[class^="margin-"] {
             margin-bottom: 17px;
             letter-spacing: 0.8px;
         }
-
         &>.button {
             grid-area: button;
             justify-self: start;
@@ -159,8 +140,7 @@ body > div[class^="margin-"] {
             font-size: 13px;
             line-height: 13px;
         }
-
-        &>img{
+        &>img {
             grid-area: mainImage;
             align-self: center;
             object-fit: cover;
@@ -172,29 +152,27 @@ body > div[class^="margin-"] {
             border-radius: 50%;
         }
     }
-
     .servicesSection {
         display: grid;
         grid-template-columns: repeat(4, 225px);
         gap: 20px;
         grid-auto-rows: 305px;
-
         padding-top: 60px;
         padding-bottom: 20px;
         &>h2 {
             display: none;
         }
-
         &>article {
             overflow: hidden;
             padding: 21px 33px;
             display: grid;
             grid-template-rows: auto auto 1fr;
-            grid-template-areas: "image" "headline" "content";
+            grid-template-areas: 
+                "image" 
+                "headline" 
+                "content";
             row-gap: 12px;
             background: #fff;
-
-
             &>h3 {
                 grid-area: headline;
                 color: #333333;
@@ -204,7 +182,6 @@ body > div[class^="margin-"] {
                 text-transform: uppercase;
                 text-align: center;
             }
-
             &>img {
                 grid-area: image;
                 width: 120px;
@@ -219,20 +196,17 @@ body > div[class^="margin-"] {
                 text-align: justify;
                 letter-spacing: 0.8px;
             }
-
             &:hover {
                 background-color: #76c38f;
                 &>h3 {
                     color: #fff;
                 }
-
                 &>p {
                     color: #fff;
                 }
             }
         }
     }
-
     .latestWorkSection {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -240,8 +214,6 @@ body > div[class^="margin-"] {
         gap: 30px;
         padding-top: 20px;
         padding-bottom: 60px;
-        
-
         &::before {
             content: '';
             display: block;
@@ -252,7 +224,6 @@ body > div[class^="margin-"] {
             height: 3px;
             background-color: #303030;
         }
-
         &>h2 {
             grid-area: ~"1 / 1 / 2 / 4";
             align-self: center;
@@ -266,15 +237,14 @@ body > div[class^="margin-"] {
             font-weight: 400;
             line-height: 38.4px;
             text-transform: uppercase;
-
         }
-
         &>article {
             display: grid;
             grid-auto-flow: row;
-            grid-template-areas: "image" "headline";
+            grid-template-areas: 
+                "image" 
+                "headline";
             border: 5px solid #fff;
-
             &>h3 {
                 color: #ffffff;
                 font-size: 14px;
@@ -285,7 +255,6 @@ body > div[class^="margin-"] {
                 text-align: center;
                 background-color: #000;
             }
-
             &>img {
                 grid-area: image;
                 width: 290px;
@@ -305,12 +274,11 @@ body > div[class^="margin-"] {
     column-gap: 20px;
     padding: 40px 120px 0;
     grid-template-areas: 
-        "fromBlog  quickLinks latestTweets contactUs"
-        "hr        hr         hr           hr"
+        "fromBlog  quickLinks latestTweets contactUs" 
+        "hr        hr         hr           hr" 
         "copyright copyright  templateBy   templateBy";
     background-color: #303030;
     color: #979797;
-
     & a {
         color: #76c38f;
         font-size: 13px;
@@ -318,7 +286,6 @@ body > div[class^="margin-"] {
     }
     &>section {
         margin-bottom: 40px;
-
         h3 {
             color: #ffffff;
             font-size: 16px;
@@ -329,7 +296,6 @@ body > div[class^="margin-"] {
     }
     &>.fromBlog {
         grid-area: fromBlog;
-
         & h4 {
             margin-bottom: 14px;
         }
@@ -338,7 +304,6 @@ body > div[class^="margin-"] {
             font-size: 10px;
             line-height: 12px;
             margin: 10px 0;
-
             &>a {
                 font-size: 10px;
                 line-height: 12px;
@@ -350,10 +315,8 @@ body > div[class^="margin-"] {
             font-size: 13px;
         }
     }
-
     &>.quickLinks {
         grid-area: quickLinks;
-        
         &>ul {
             list-style-type: none;
             line-height: 32px;
@@ -365,7 +328,6 @@ body > div[class^="margin-"] {
             }
         }
     }
-
     &>.latestTweets {
         grid-area: latestTweets;
         & h4 {
@@ -376,10 +338,8 @@ body > div[class^="margin-"] {
             font-size: 13px;
         }
     }
-
     &>.contactUs {
         grid-area: contactUs;
-
         &>form {
             [placeholder] {
                 display: block;
@@ -389,7 +349,6 @@ body > div[class^="margin-"] {
                 width: 100%;
                 padding: 10px;
                 margin-bottom: 10px;
-                
                 &::placeholder {
                     color: #989898;
                     text-transform: capitalize;
@@ -397,12 +356,10 @@ body > div[class^="margin-"] {
                     line-height: 15.6px;
                 }
             }
-
             &>textarea {
                 resize: none;
                 height: 80px;
             }
-            
             &>input[type="submit"] {
                 color: #303030;
                 background-color: #76c38f;
@@ -416,12 +373,10 @@ body > div[class^="margin-"] {
             }
         }
     }
-
     &>hr {
         grid-area: hr;
         border: 1px solid #000;
     }
-
     &>.copyright {
         grid-area: copyright;
         padding: 24px 0;
@@ -429,7 +384,6 @@ body > div[class^="margin-"] {
         font-size: 13px;
         line-height: 13px;
     }
-
     &>.templateBy {
         grid-area: templateBy;
         justify-self: end;
@@ -438,5 +392,4 @@ body > div[class^="margin-"] {
         font-size: 13px;
         line-height: 13px;
     }
-
 }
