@@ -79,7 +79,6 @@ body > div[class^="margin-"] {
                 &:hover {
                     background-color: #76c38f;
                     border-radius: 5px;
-    
                 }
             }
         }
@@ -191,7 +190,9 @@ body > div[class^="margin-"] {
             display: grid;
             grid-template-rows: auto auto 1fr;
             grid-template-areas: "image" "headline" "content";
+            row-gap: 12px;
             background: #fff;
+
 
             &>h3 {
                 grid-area: headline;
@@ -201,7 +202,6 @@ body > div[class^="margin-"] {
                 line-height: 32px;
                 text-transform: uppercase;
                 text-align: center;
-                padding: 12px 0;
             }
 
             &>img {
@@ -229,11 +229,7 @@ body > div[class^="margin-"] {
                     color: #fff;
                 }
             }
-
-            
-
         }
-        
     }
 }
 

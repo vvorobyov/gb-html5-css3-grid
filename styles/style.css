@@ -154,6 +154,7 @@ body > div[class^="margin-"] {
   display: grid;
   grid-template-rows: auto auto 1fr;
   grid-template-areas: "image" "headline" "content";
+  row-gap: 12px;
   background: #fff;
 }
 .pageContent .servicesSection > article > h3 {
@@ -164,7 +165,6 @@ body > div[class^="margin-"] {
   line-height: 32px;
   text-transform: uppercase;
   text-align: center;
-  padding: 12px 0;
 }
 .pageContent .servicesSection > article > img {
   grid-area: image;
